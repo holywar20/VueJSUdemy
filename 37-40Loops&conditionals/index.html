@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/vue/dist/vue"></script>
+
+<div id="app">
+	<!-- v-if and v-else -->
+	<button @click="show = !show">Test v-if</button>
+	<p v-if="show">v-if = {{ show }}</p>
+	<p v-else>v-else = {{ show }}</p>
+
+	<!-- utilizing templates -->
+	<template v-if="show">
+		<h1>Template is showing!</h1>
+	</template>
+
+	<!-- v-show will remove the element completely, but works identically. -->
+
+
+	<!-- v-for -->
+	<ul>
+		<li v-for="(ingrediant , i) in ingrediants">{{ ingrediant }} ( {{i}} )</li>
+	</ul>
+
+	<hr>
+	<!-- v-for , looping through key value pairs and objects -->
+	<ul>
+		<li v-for="person in persons">
+			<span v-for="( value , key , index  ) in person">{{ index}} :  {{ key }} : {{ value }} </span>
+		</li>
+	</ul>
+
+	<hr>
+	<!-- v-for -->
+	<span v-for="n in 10"> {{ n }} </span>
+</div>
+
+<script src="index.js"></script>

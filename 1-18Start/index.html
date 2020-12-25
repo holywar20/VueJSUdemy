@@ -1,0 +1,13 @@
+<script src="https://unpkg.com/vue/dist/vue"></script>
+
+
+<div id="app">
+	<input type="text" v-on:input="changeTitle">
+	<p v-once>{{ title }}</p>
+
+	<p>Title Changed {{ displayCount() }} times</p><br>
+	<a v-bind:href="link">Google!</a>
+	<p v-html="finishedLink"></p>
+</div>
+
+<script src="lesson-initial.js"></script>

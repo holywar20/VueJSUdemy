@@ -1,0 +1,14 @@
+<script src="https://unpkg.com/vue/dist/vue"></script>
+
+<div id="app">
+	<!-- Use v-model to set up two way data binding -->
+	<input type="text" v-model="name">
+
+	<!-- Computed properties -->
+	<button v-on:click="counter++">Up</button>
+	<button v-on:click="counter--">Down</button>
+	<p>Counter : {{ counter }}</p>
+	<p>Result: {{ result() }} | {{ output }}</p>
+</div>
+
+<script src="index.js"></script>

@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue/dist/vue"></script>
+
+
+<div id="app">
+	<!-- Pass an event optionally using $event in any param-->
+	<button v-on:click="increase(2 , $event )">Click</button>
+	<p>{{counter}}</p>
+
+	<!-- Dealing with events -->
+	<p v-on:mousemove="updateCoordinates"> {{ x }} / {{ y }}
+		- <span v-on:mousemove="dummy"> Method Based Event Propagation Stop</span>
+		- <span v-on:mousemove.stop=""> Directive based event propagation stop</span>
+	</p>
+
+	<!-- Key modifiers -->
+	<input type="text" v-on:keyup.enter="alertMe">
+</div>
+
+<script src="index.js"></script>

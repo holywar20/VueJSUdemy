@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/vue/dist/vue"></script>
+<link rel="stylesheet" href="index.css"></link>
+
+<div id="app">
+	<div 
+	class="demo" 
+	:class="{ red:attachRed }"
+	@click="attachRed = !attachRed">
+	</div>
+	<div class="demo" :class="color"></div>
+	<div class="demo"></div>
+	<hr>
+	<input type="text" v-model="color">
+</div>
+
+
+<script src="index.js"></script>
